@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+void my_recursive(char *str)
+{
+    int left=0,right=strlen(str)-1;
+    while(l<r)
+    {
+        if(l!=r)
+        {
+            
+        }
+    }
+}
+int main()
+{
+    char str[20]="Hi ia  m";
+    my_recursive(str);
+    printf("Reversed string :%s",my_recusrive(str));
+    return 0;
+}
