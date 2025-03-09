@@ -1,0 +1,103 @@
+Hi These are the top most repeated coding questions for Embedded Engineer in Interview:
+
+Advanced C Coding Questions:
+Write a program to reverse a string using pointers.
+Implement a stack using an array with push, pop, and peek operations.
+Implement a queue using a linked list.
+Write a function to check if a given number is prime.
+Implement a function to find the factorial of a number using recursion.
+Write a function to count the number of set bits in an integer.
+Implement a function to reverse bits of an integer.
+Write a function to swap two numbers without using a third variable.
+Implement a function to check if a number is an Armstrong number.
+Write a program to generate the Fibonacci sequence using recursion.
+Implement a function to find the largest element in an array.
+Write a function to check if a string is a palindrome.
+Implement a function to perform binary search on a sorted array.
+Write a function to rotate an array to the right by k positions.
+Implement a function to merge two sorted arrays into a single sorted array.
+Write a function to remove duplicate elements from an array.
+Implement a function to find the second largest element in an array.
+Write a function to find the sum of digits of a number using recursion.
+Implement a function to convert a decimal number to binary.
+Write a function to reverse a linked list iteratively.
+Implement a function to check if a linked list has a cycle.
+Write a function to find the intersection of two linked lists.
+Implement a function to sort an array using bubble sort.
+Write a function to sort an array using selection sort.
+Implement a function to sort an array using insertion sort.
+Write a function to find the missing number in an array of 1 to N.
+Implement a function to count occurrences of a given element in an array.
+Write a function to check if an array is sorted.
+Implement a function to find the first non-repeating character in a string.
+Write a function to implement string concatenation without using strcat.
+Implement a function to count vowels and consonants in a string.
+Write a function to implement a simple calculator with switch-case.
+Implement a function to check if a number is even or odd using bitwise operators.
+Write a function to find the greatest common divisor (GCD) using recursion.
+Implement a function to find the least common multiple (LCM) of two numbers.
+Write a function to check if two strings are anagrams.
+Implement a function to check if a string contains only digits.
+Write a function to convert a string to uppercase without using built-in functions.
+Implement a function to remove white spaces from a string.
+Write a function to replace all occurrences of a character in a string.
+Implement a function to find the longest word in a sentence.
+Write a function to find the Hamming distance between two binary numbers.
+Implement a function to print all permutations of a string.
+Write a function to implement the strcpy function.
+Implement a function to count the frequency of characters in a string.
+Write a function to check if a given year is a leap year.
+Implement a function to convert lowercase letters to uppercase in a string.
+Write a function to find the median of an unsorted array.
+Implement a function to merge two linked lists in sorted order.
+Write a function to find the Kth smallest element in an array.
+Implement a function to convert an integer to a string.
+Write a function to reverse words in a sentence.
+Implement a function to implement a simple memory allocator.
+Write a function to perform addition of two large numbers represented as strings.
+Implement a function to multiply two large numbers represented as strings.
+Write a function to print the binary representation of a float.
+Implement a function to find the length of the longest palindrome substring.
+Write a function to implement a circular linked list.
+Implement a function to detect and remove a loop in a linked list.
+Write a function to implement the atoi function.
+Implement a function to find the first occurrence of a substring in a string.
+Write a function to simulate a simple command-line interpreter.
+Implement a function to find all subsets of a given set.
+Write a function to generate Pascal’s Triangle.
+Implement a function to find the longest common prefix of a set of strings.
+Write a function to convert a number from one base to another.
+Implement a function to print numbers in words (e.g., 123 → "one hundred twenty-three").
+Write a function to count inversions in an array.
+Implement a function to find the largest sum contiguous subarray (Kadane's algorithm).
+Write a function to remove adjacent duplicates in a string.
+Implement a function to rotate a 2D matrix by 90 degrees.
+Write a function to implement a doubly linked list.
+Implement a function to delete a node from a linked list without using head pointer.
+Write a function to insert a node at a given position in a linked list.
+Implement a function to add two numbers represented by linked lists.
+Write a function to multiply two matrices without using an additional matrix.
+Implement a function to check if a number is a power of two.
+Write a function to generate random numbers without using rand().
+Implement a function to simulate a simple banking system with structures.
+Write a function to implement a simple hash table with open addressing.
+Implement a function to check if a binary number is a palindrome.
+Write a function to implement a basic LRU cache using linked list.
+Implement a function to simulate a stack using two queues.
+Write a function to implement a queue using two stacks.
+Implement a function to find the longest increasing subsequence in an array.
+Write a function to implement a priority queue using an array.
+Implement a function to calculate the power of a number using bitwise operators.
+Write a function to find the maximum product subarray.
+Implement a function to find the largest rectangle in a histogram.
+Write a function to implement a simple producer-consumer problem using threads.
+Implement a function to convert a sparse matrix to a compressed format.
+Write a function to find the minimum window substring.
+Implement a function to calculate the determinant of a matrix.
+Write a function to convert a doubly linked list to a balanced binary search tree.
+Implement a function to find the missing element in a duplicate array.
+Write a function to implement a simple JSON parser.
+Implement a function to implement a simple event-driven system using function pointers.
+Write a function to implement the memcmp function.
+Implement a function to compare floating-point numbers accurately.
+Write a function to implement a simple encryption-decryption mechanism.
