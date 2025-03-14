@@ -1,0 +1,21 @@
+#include<stdio.h>
+int setbitcount(int num)
+{
+    int count=0;
+   while(num>0)
+   {
+       if((num&1)==1)
+       {
+           count++;
+       }
+       num=num>>1;
+   }
+   return count;
+}
+int main()
+{
+    int num=10;
+    int result=setbitcount(num);
+    printf("Facotrial of num %d : %d ",num,result);
+    return 0;
+}
