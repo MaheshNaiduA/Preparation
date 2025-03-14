@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+// Function to sort the array in descending order and find the largest element
+void findlarge(int arr[], int len) 
+{
+    // Bubble sort to sort in descending order
+    for (int i = 0; i < len - 1; i++) {
+        for (int j = 0; j < len - 1 - i; j++) {
+            if (arr[j] < arr[j + 1]) { // Swap if needed
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    // Printing sorted array
+    printf("Sorted array in descending order: ");
+    for (int i = 0; i < len; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    // Printing the largest element
+    printf("Largest element: %d\n", arr[0]);
+}
+
+int main() 
+{
+    int arr[] = {1, 2, 3, 4, 5}; 
+    int len = sizeof(arr) / sizeof(arr[0]); // Calculate size of array
+    findlarge(arr, len); // Pass array and its size
+    return 0;
+}
