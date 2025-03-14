@@ -1,20 +1,26 @@
 #include<stdio.h>
-#include<stdlib.h>
-void my_recursive(char *str)
+#include<string.h>
+void my_recursive(char *str,int left,int right)
 {
-    int left=0,right=strlen(str)-1;
-    while(l<r)
+    if(left>=right)
     {
-        if(l!=r)
-        {
-            
-        }
+        return;
     }
+    char temp=str[left];
+    str[left]=str[right];
+    str[right]=temp;
+    my_recursive(str,left+1,right-1);
+}
+
 }
 int main()
 {
-    char str[20]="Hi ia  m";
-    my_recursive(str);
-    printf("Reversed string :%s",my_recusrive(str));
+    char str[20];
+    printf("Enter the string:");
+    scanf("%[^\n]s",str);
+    int len=strlen(str);
+    my_recursive(str,0,len-1);
+    printf("Reverse string :");
+    printf("%s",str);
     return 0;
 }
