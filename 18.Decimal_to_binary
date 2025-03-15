@@ -1,0 +1,26 @@
+#include<stdio.h>
+void dectobin(int num)
+{
+  for(int i=31;i>=0;i--)
+  {
+    int mask=0x01<<i;
+    if(mask&num)
+    {
+      printf("1");
+    }
+    else
+    {
+      printf("0");
+    }
+    if(i%4==0)
+    {
+      printf(" ");
+    }
+}
+}
+int main()
+{
+  int num=10;
+  dectobin(num);
+  return 0;
+}
