@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+void sortarray(int *arr,int len)
+{
+    for(int i=0;i<len-1;i++)
+    {
+        for(int j=0;j<len-i-1;j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                int temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+}
+int binarysearch(int arr[],int low,int high,int target)
+{
+  while(low<=high)
+  {
+    int mid=low+(high-low)/2;
+    if(arr[mid]==target)
+    {
+        return mid;
+    }
+    if(arr[mid]<target)
+        low=mid+1;
+    else
+        high=mid-1;
+  }
+    return -1;
+
+}
+int main()
+{
+    int arr[]={10,4,0,4,5};
+    int target=4;
+    int len=sizeof(arr)/sizeof(arr[0]);
+    sortarray(arr,len);
+    for(int i=0;i<len;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    int result=binarysearch(arr,0,len-1,target);
+    if(result==-1)
+    {
+        printf("Target is not found");
+    }
+    else
+    {
+        printf("Target is found at pos %d",result+1);
+    }
+    
+}
