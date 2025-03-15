@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {  
+    int data;
+    struct node *next;
+} *head = NULL, *temp = NULL;
+
+// Function to find a node with a given value
+struct node* findNode(int val) {
+    struct node* current = head;
+    while (current != NULL) {
+        if (current->data == val) 
+            return current;  // Return existing node if value is found
+        current = current->next;
+    }
+    return NULL;  // Return NULL if value is not found
+}
+
+// Function to create a linked list with cycle detection from input
+void create() {
+    int val;
+    printf("Enter the element: ");
+    scanf("%d", &val);
+
+    struct node* existingNode = findNode(val);
+    struct node* newNode = (struct node*)malloc(sizeof(struct node));
+
+    newNode->data = val;
+    newNode->next = NULL;
+
+    if (head == NULL) {
+        head = newNode;
+    } else {
+        temp = head;
+        while (temp->next != NULL) {
+            temp = temp->next;
+        }
+        if (existingNode != NULL) {
+            // If value already exists, create a cycle
+            temp->next = existingNode;
+            printf("Cycle created at node with value: %d\n", val);
+            free(newNode);  // No need for a new node
+            return;
+        }
+        temp->next = newNode;
+    }
+}
+
+// Function to display the linked list (stops if cycle detected)
+void display() {
+    struct node *slow = head, *fast = head;
+    printf("Linked list elements: ");
+    
+    while (fast != NULL && fast->next != NULL) {
+        printf("%d -> ", slow->data);
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast) {
+            printf("CYCLE DETECTED!\n");
+            return;
+        }
+    }
+    while (slow != NULL) {
+        printf("%d -> ", slow->data);
+        slow = slow->next;
+    }
+    printf("NULL\n");
+}
+
+// Function to check if the linked list has a cycle
+int hasCycle(struct node *head) {
+    struct node *slow = head, *fast = head;
+
+    while (fast != NULL && fast->next != NULL) {
+        slow = slow->next;         // Move slow by 1 step
+        fast = fast->next->next;   // Move fast by 2 steps
+
+        if (slow == fast) {
+            return 1;  // Cycle detected
+        }
+    }
+    return 0;  // No cycle
+}
+
+int main() {
+    int size;
+    printf("Enter the number of elements in the Linked List: ");
+    scanf("%d", &size);
+
+    for (int i = 0; i < size; i++) {
+        create();
+    }
+
+    display();
+
+    if (hasCycle(head))
+        printf("Cycle detected in the linked list!\n");
+    else
+        printf("No cycle in the linked list.\n");
+
+    return 0;
+}
