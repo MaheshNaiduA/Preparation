@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{  
+    int data;
+    struct node *next;
+}*head,*temp,*new;
+void create()
+{
+  struct node *new=(struct node*)malloc(sizeof(struct node));
+  int val;
+  printf("Enter the element:");
+  scanf("%d",&val);
+  new->data=val;
+  new->next=NULL;
+  if(head==NULL)
+      head=new;
+  else{
+    temp=head;
+  while(temp->next!=NULL)
+    {
+      temp=temp->next;
+    }
+    temp->next=new;
+    }
+}
+void display()
+{
+  temp=head;
+  if(head==NULL)
+    {
+      printf("Linked list is empty");
+    }
+    printf("Linked list elemets : ");
+  while(temp!=NULL)
+    {
+      
+      printf(" %d->",temp->data);
+      temp=temp->next;
+    }
+  printf("NULL\n");
+  }
+
+
+void reverse()
+{
+    struct node *curr=head,*prev=NULL,*next=NULL;
+    while(curr!=NULL)
+    {
+        next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=next;
+    }
+    head=prev;
+
+}
+int main()
+{
+  int size;
+  printf("Enter the number of LL");
+  scanf("%d",&size);
+  for(int i=0;i<size;i++)
+    {
+        create();
+    }
+  display();
+  reverse();
+  display();
+  return 0;
+}
